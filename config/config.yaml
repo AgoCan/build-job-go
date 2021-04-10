@@ -1,0 +1,38 @@
+# gitlab 相关参数
+GIT_USERNAME: test  # git用户名
+GIT_EMAIL: heihei   # git邮箱
+GIT_PASSWORD: 12345 # git密码
+GIT_ORIGIN: master  # git分支
+GIT_URL: github.com # 代码仓库
+# harbor相关参数
+HARBOR_REGISTRY: hub.ex.com  # harbor地址
+HARBOR_USERNAME: admin       # harbor用户名
+HARBOR_PASSWORD: Harbor12345 # harbor密码
+HARBOR_IP: 127.0.0.1       # harbor的IP地址，主要是harbor可能使用域名方式
+EAGLE_REGISTER: eagle-nest # 构建后镜像的仓库地址
+PRE_IMAGE_NAME: rose-userid
+
+# 用户信息
+USERNAME: hank             # 用户名，应该记录一下和id的对应关系，容易查找bug
+USER_ID: 1                 # 用户ID，主要是
+CALLBACK_URL: hankbook.cn  # 回调地址
+CALLBACK_ID: 1             # 基本上是不使用的，回调id
+PROJECT: ""                # 项目名称
+COUNT: 1                   # 版本号的确认
+CODE_DIR: train            # 构建代码的目录
+LAUNCHES_NUM: 1            # 构建次数        
+IS_PUSH: 1                 # 1 代表推送， 0代表不推送
+REMAINDER: 0               # 0 代表不求余，往上数字数字
+IS_ONLY_CODE: 0            # 如果为空表示使用默认的Dockerfile文件。其他表示扩展的Dockerfile的文件名
+
+# 下载的url。如果是k8s内网，因为使用的是宿主机docker构建，所以
+DOWNLOAD_DOMAIN: hank997.default.svc.cluster.local
+DOWNLOAD_IP: 127.0.0.1
+# 基础镜像，强制替换成最基础的镜像
+BASE_FRAME_IMAGE_NAME: ""
+
+# 代码配置
+DOCKERFILE_LOG_PATH: /opt/das/dockerfile_log/
+DOCKERFILE_LOG_URL_PATH: /dockerfile_log/
+COMMAND_LOG_PATH: /dockerfile_log/
+WORKSPACE: /data/das/ci/workspace
